@@ -20901,7 +20901,10 @@ Look at the graph at the bottom left from the cell above(the visualization creat
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
-<p>AdaBoost works by passing over the data many times and using weak (not the complicated mathematically) guesses and then improving upon them as it progresses by taking into account what it learns along the way about the different placements of the data. This is an oversimplification, but the core idea is that is uses many of these weak learners and then allows them to all have a vote to form one strong opinion or prediction.</p>
+<p>AdaBoost combines weak learners to form one strong rule.</p>
+<p>The algorithm takes its first pass, the base learner, and assigns equal weights to them. If there is any prediction error that is caused by the first iteration, then we weight them higher and apply the next learning iteration with these new weights being solved for at a higher rate of importance. AdaBoost continues this way through all the iterations until the limit of the base learning algorithm is reached or a higher accuracy is achieved.</p>
+<p>It then combines the results of all these weak learners and creates one strong learner thereby improving the prediction power of the model. This can be visualized in the below images showing multiple iterations and weak learners and the final strong learner that is created by combibing them to reach a higher accuracy.</p>
+<p><img src="./maxresdefault.jpg"></p>
 
 </div>
 </div>
